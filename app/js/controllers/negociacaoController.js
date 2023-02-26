@@ -14,9 +14,13 @@ export class NegociacaoController{
 
     criarNegociacao(){
         let data = new Date(this.#campmData.value);
+        let dia = data.getUTCDate();
+        let mes = data.getUTCMonth() + 1;
+        let ano = data.getUTCFullYear();
+        let dataNegociacao = `${dia}/${mes}/${ano}`;
         let quantidade = this.#campoQuantidade.value;
         let valor = this.#campoValor.value;
-        let negociacao = new Negociacao(data, quantidade, valor)
+        let negociacao = new Negociacao(dataNegociacao, quantidade, valor)
 
         this.#listaNegociacao.adicionar(negociacao)
         console.log(this.#listaNegociacao.negociacao);
