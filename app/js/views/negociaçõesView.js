@@ -1,7 +1,7 @@
 export class NegociaçõesView{
     atualizarTabelaNegociacoes(data, quantidade, valor){
         let tabela = document.getElementById("tb-lista");
-        let qtdeLinhas = tabela.ariaRowSpan.length;
+        let qtdeLinhas = tabela.rows.length;
         let linha = tabela.insertRow(qtdeLinhas);
 
         let cellCodigo = linha.insertCell(0);

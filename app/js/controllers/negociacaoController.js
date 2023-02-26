@@ -1,5 +1,6 @@
 import {Negociacao} from "../models/negociacao.js";
 import {ListaNegociacao} from "../models/listaNegociacoes.js";
+import { NegociaçõesView } from "../views/negociaçõesView.js";
 export class NegociacaoController{
     #campmData;
     #campoQuantidade;
@@ -20,9 +21,13 @@ export class NegociacaoController{
         let dataNegociacao = `${dia}/${mes}/${ano}`;
         let quantidade = this.#campoQuantidade.value;
         let valor = this.#campoValor.value;
-        let negociacao = new Negociacao(dataNegociacao, quantidade, valor)
+        let negociacao = new Negociacao(dataNegociacao, quantidade, valor);
+        let view = new NegociaçõesView();
 
-        this.#listaNegociacao.adicionar(negociacao)
+        this.#listaNegociacao.adicionar(negociacao);
+        view.atualizarTabelaNegociacoes(dataNegociacao, quantidade, valor);
+
+
         console.log(this.#listaNegociacao.negociacao);
     }
 }

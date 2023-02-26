@@ -1,0 +1,50 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    max-width: 800px;
+    font-family: gotham, arial, helvetica, sans-serif;
+    font-size: 18px;
+    padding: 0;
+    margin: 0 auto !important;
+}
+#titulo-principal{
+    text-align: center;
+}
+#titulo-tabela{
+    text-align: center;
+}
+
+.cl-container{
+    width: 800px;
+    height: 100px;
+    /*background-color: aqua;*/
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;   
+}
+table{
+    margin: auto;
+}
+table tr td{
+    width: 200px;
+}
+th{
+    width: 200px;
+    text-align: left;
+}
+.form{
+    background-color: bisque;
+    text-align: center;
+}
+.form-group{
+    text-align: left;
+    margin-top: 10px;
+}
+#bt-salvar{
+    background-color: rgb(81, 188, 196);
+    position: relative;
+    color: white;
+    margin-bottom: 10px;
+}

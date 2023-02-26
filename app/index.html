@@ -5,40 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bolsa de valores</title>
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
     <main aria-label="conteúdo principal do site">
         <div class="container">
             <h1 class="text-center" id="titulo-principal">Bolsa de valores</h1><br>
-            <div>
+            <div id="div-form">
                 <form class="form">
-                    <div class="form-group">
-                        <label for="dt-negociacao">Data da negociação</label><br>
-                        <input type="date" class="form-control" name="dt-negociacao" id="dt-negociacao">
+                    <div class="cl-container">
+                        <div class="form-group">
+                            <label for="dt-negociacao">Data da negociação</label><br>
+                            <input type="date" class="form-control" name="dt-negociacao" id="dt-negociacao">
+                        </div>
+                        <div class="form-group">
+                            <label for="qtde-acoes-vendidas">Quantidade de ações vendidas</label><br>
+                            <input type="number" class="form-control" id="qtde-acoes-vendidas" min="1" max="100" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label for="vlr-acoes">Valor das ações</label><br>
+                            <input type="number" class="form-control" id="vlr-acoes" min="0.0" max="1000000.0" step="0.1">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="qtde-acoes-vendidas">Quantidade de ações vendidas</label><br>
-                        <input type="number" class="form-control" id="qtde-acoes-vendidas" min="1" max="100" step="0.1">
-                    </div>
-                    <div class="form-group">
-                        <label for="vlr-acoes">Valor das ações</label><br>
-                        <input type="number" class="form-control" id="vlr-acoes" min="0.0" max="1000000.0" step="0.1">
-                    </div>
-                    <button class="btn btn-primary" type="submit">Salvar</button>
-                    <div>
-                        <h2>Lista de negociações</h2>
-                        <table id="tb-lista">
-                            <thead>
-                                <th>Data da negociação</th>
-                                <th>Quantidade de ações</th>
-                                <th>Valor das ações</th>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
-                    </div>
+                    <button class="btn btn-primary" type="submit" id="bt-salvar">Salvar</button>
                 </form>
+            </div>    
+            <div id="div-tabela">
+                <h2 id="titulo-tabela">Lista de negociações</h2>
+                <table id="tb-lista">
+                    <thead>
+                        <th>Código</th>
+                        <th>Data da negociação</th>
+                        <th>Quantidade de ações</th>
+                        <th>Valor das ações</th>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
             </div>
         </div>     
     </main>
