@@ -1,7 +1,10 @@
+import { Negociacao } from "../models/negociacao.js";
+import { ListaNegociacoes } from "../models/listaNegociacoes";
 export class NegociacaoController{
     #campmData;
     #campoQuantidade;
     #campoValor;
+    #listaNegociacao = new ListaNegociacoes();
 
     constructor(){
         this.#campmData = document.getElementById('dt-negociacao');
@@ -13,8 +16,9 @@ export class NegociacaoController{
         let data = new Date(this.#campmData.value);
         let quantidade = this.#campoQuantidade.value;
         let valor = this.#campoValor.value;
-        let negociacaoController = new NegociacaoController(data, quantidade, valor)
+        let negociacao = new Negociacao(data, quantidade, valor)
 
-        console.log(negociacaoController);
+        this.#listaNegociacao.adicionar(negociacao)
+        console.log(this.#listaNegociacao.Negociacao);
     }
 }
