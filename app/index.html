@@ -13,18 +13,31 @@
             <div>
                 <form class="form">
                     <div class="form-group">
-                        <input type="date" class="form-control" id="dt-negociacao" name="dt-negociacao">
-                        <label for="data-negociacao">Data da negociação</label>
+                        <label for="dt-negociacao">Data da negociação</label><br>
+                        <input type="date" class="form-control" name="dt-negociacao" id="dt-negociacao">
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" id="qtde-acoes-vendidas" min="1" max="100">
-                        <label for="qtde-acoes-vendidas">Quantidade de ações vendidas</label>
+                        <label for="qtde-acoes-vendidas">Quantidade de ações vendidas</label><br>
+                        <input type="number" class="form-control" id="qtde-acoes-vendidas" min="1" max="100" step="0.1">
                     </div>
                     <div class="form-group">
-                        <input type="number" class="form-control" id="vlr-acoes" min="0.0" max="1000000.0">
-                        <label for="valor-acoes">Valor das ações</label>
+                        <label for="vlr-acoes">Valor das ações</label><br>
+                        <input type="number" class="form-control" id="vlr-acoes" min="0.0" max="1000000.0" step="0.1">
                     </div>
                     <button class="btn btn-primary" type="submit">Salvar</button>
+                    <div>
+                        <h2>Lista de negociações</h2>
+                        <table>
+                            <thead>
+                                <th>Data da negociação</th>
+                                <th>Quantidade de ações</th>
+                                <th>Valor das ações</th>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </form>
             </div>
         </div>     
