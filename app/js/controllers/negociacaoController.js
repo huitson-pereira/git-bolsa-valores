@@ -28,6 +28,7 @@ export class NegociacaoController{
         view.atualizarTabelaNegociacoes(dataNegociacao, quantidade, valor);
 
 
-        console.log(this.#listaNegociacao.negociacao);
+        /*console.log(this.#listaNegociacao.negociacao);*/
+        console.log(this.#listaNegociacao.pequisaNegociacoes());
     }
 }
